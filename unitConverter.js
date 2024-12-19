@@ -7,7 +7,7 @@ btnEl.addEventListener("click", function(){
     sectionOne()
     sectionTwo()
     sectionThree()
-    
+    inputField.textContent = "";
     
 })
 
@@ -36,3 +36,11 @@ function sectionThree(){
     section3El.innerHTML = `${inputField} kilos = ${kiloToPound} pounds | 
     ${inputField} pounds = ${poundToKilo} kilos`
 }
+let inputField = document.getElementById("input-field");
+inputField.addEventListener('input', function () {
+    if ((inputField.value/inputField.value) !== 1) {
+      alert("Please enter a number");
+      
+    }
+  });
+  
